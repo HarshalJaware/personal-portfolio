@@ -1,133 +1,247 @@
 export const projects = [
   {
-    id: 'polexpert',
-    title: 'PoleXpert',
-    category: 'Engineering Software',
+    id: 'otg-transportation',
+    title: 'On-The-Go — Multi-Provider Transportation Platform',
+    category: 'Transportation & Logistics',
     shortDescription:
-      'An engineering platform for utility pole management, structural analysis, and workflow-based engineering operations.',
-
+      'Enterprise-grade multi-provider ride-booking and dispatch platform connecting Uber, Lyft, and Google Maps with real-time fare estimation, driver routing, and end-to-end billing automation for brokers and fleet operators.',
     description:
-      'PoleXpert is an engineering software platform designed around utility-pole workflows, combining project management, field operations, structural analysis, and engineering data.',
-
+      'On-The-Go (OTG) is a large-scale, production transportation management system designed and built over 4 years at Tagrem India Pvt. Ltd. The platform orchestrates multi-provider ride scheduling and dispatch by integrating Uber and Lyft APIs in a unified workflow — enabling brokers, fleet partners, and clients to manage rides, compare fares, track drivers in real time, and process invoices and vouchers within a single, cohesive system. The platform handles high-concurrency booking operations and complex webhook event pipelines across all stages of the ride lifecycle.',
     technologies: [
-      'React.js',
       'Node.js',
+      'React.js',
       'PostgreSQL',
-      'Sequelize',
-      'Cesium',
-      'Resium',
-      'Turf.js',
-      'Azure',
+      'Google Maps API',
+      'Uber API',
+      'Lyft API',
+      'Webhooks & Event Pipelines',
+      'REST APIs',
+      'HTML5 / CSS3',
     ],
-
     highlights: [
-      'Project and job management workflows',
-      'Role-based application workflows',
-      'Interactive geospatial pole selection',
-      'Utility pole structural analysis workflows',
-      'Engineering data management',
+      'Unified multi-provider integration: simultaneous Uber and Lyft API connectivity for live fare comparison, seat availability, and automated trip dispatch',
+      'Real-time geospatial tracking: Google Maps JavaScript, Directions, and Geocoding APIs powering interactive pickup/dropoff selection and live route rendering',
+      'Comprehensive multi-tenant module architecture: Broker Management, Partner Management, Client Accounts, Provider Profiles, Invoice Generation, and Voucher Processing',
+      'Resilient event-driven webhook infrastructure handling all ride lifecycle state transitions — from booking through completion to payment settlement',
+      'High-concurrency PostgreSQL schema design with advanced indexing and query optimisation supporting peak booking volumes without degradation',
+      'Full end-to-end billing automation: invoice creation, voucher issuance, and reconciliation across provider payment models',
     ],
-
     responsibilities: [
-      'Developed frontend functionality using React.js.',
-      'Developed backend APIs using Node.js.',
-      'Worked with PostgreSQL and Sequelize for application data.',
-      'Implemented geospatial workflows using Cesium and related mapping libraries.',
-      'Worked on role-based project and job workflows.',
-      'Integrated structural analysis functionality into the application workflow.',
+      'Architected and delivered responsive, high-performance frontend dispatch dashboards and booking interfaces using React.js — optimised for real-time data updates and multi-tenant workflows.',
+      'Designed and implemented the core high-throughput Node.js backend service layer, including RESTful API contracts, business logic orchestration, and multi-provider integration middleware.',
+      'Engineered asynchronous webhook processing handlers for Uber and Lyft event notifications, ensuring reliable ride lifecycle state management across payment, dispatch, and completion stages.',
+      'Designed normalised PostgreSQL relational schemas, advanced query strategies, and composite indexes to support simultaneous high-frequency booking transactions.',
+      'Integrated Google Maps JavaScript API, Directions API, and Geocoding API to deliver precise routing, accurate ETA calculations, and live driver tracking on interactive map interfaces.',
+      'Contributed to full software lifecycle: technical planning, sprint delivery, code reviews, and production deployments within an Agile/Scrum engineering team.',
     ],
-
     links: {
       live: null,
       github: null,
     },
-
     screenshots: [],
-
-    architecture: null,
-
+    architecture: 'Event-driven Node.js microservices-ready backend with PostgreSQL persistence, React.js SPA frontend, Uber/Lyft/Google Maps API integrations, and webhook-based asynchronous event pipelines',
     featured: true,
   },
-
+  {
+    id: 'polexpert',
+    title: 'PoleXpert — Utility Pole Structural Analysis & 3D Visualisation Platform',
+    category: 'Engineering Software & 3D Visualisation',
+    shortDescription:
+      'Specialised engineering software platform for utility pole structural assessment, 3D spatial rendering via Three.js (3JS), load analysis, compliance verification, and field data management — purpose-built for electrical infrastructure operators.',
+    description:
+      'PoleXpert is a mission-critical engineering software platform developed at Eiris Innovation India Pvt. Ltd. for electrical utility infrastructure operators. The system streamlines the complete lifecycle of utility pole structural analysis — from job creation and field data capture through to engineering calculations, interactive 3D pole visualisations using Three.js (3JS), compliance verification, and reporting. Designed in close collaboration with electrical domain engineers, PoleXpert translates complex structural formulas and regulatory requirements into a reliable, role-driven software workflow that engineering teams can operate efficiently at scale.',
+    technologies: [
+      'Three.js (3JS)',
+      'React.js',
+      'Node.js',
+      'PostgreSQL',
+      'TypeScript',
+      'Sequelize ORM',
+      'WebGL / 3D Canvas',
+      'REST APIs',
+      'System Design',
+      'Azure DevOps',
+    ],
+    highlights: [
+      'Interactive 3D utility pole structural visualisation using Three.js (3JS): real-time rendering of pole geometry, load points, cross-arms, and equipment attachments directly in the browser',
+      'End-to-end structural analysis workflow: job creation, field data capture, pole specification modelling, load-bearing calculation, and compliance reporting in a unified system',
+      'Role-based access and workflow management for project engineers, field inspectors, and administrative stakeholders — ensuring the right personnel action each stage',
+      'Rigorous engineering data validation ensuring calculation input integrity and structural result accuracy across all analysis runs',
+      'Streamlined project and job management enabling engineering teams to track field inspection progress and analysis status in real time',
+      'Tightly integrated with the Eiris Platform for shared authentication, reusable UI components, and centralised data services',
+    ],
+    responsibilities: [
+      'Built interactive 3D utility pole structural models using Three.js (3JS) and WebGL, allowing engineers and field inspectors to visually inspect pole geometry, attachments, and load distribution in a real-time 3D canvas.',
+      'Developed intuitive, form-driven frontend interfaces for structural analysis configuration, calculation input management, and engineering result visualisation using React.js and TypeScript.',
+      'Engineered robust backend REST API services in Node.js to execute and persist structural engineering calculation workflows, enforce business rules, and manage job state transitions.',
+      'Designed and implemented normalised PostgreSQL data models using Sequelize ORM — covering pole specifications, analysis parameters, calculation runs, and compliance records.',
+      'Collaborated directly with electrical domain engineers to accurately translate structural analysis formulas, engineering standards, and compliance requirements into reliable software logic.',
+      'Contributed to Azure DevOps CI/CD pipeline configuration to ensure consistent, automated build and deployment cycles across development and production environments.',
+    ],
+    links: {
+      live: null,
+      github: null,
+    },
+    screenshots: [],
+    architecture: 'Full-stack React.js / Node.js / PostgreSQL platform with Three.js (3JS) 3D WebGL rendering engine, TypeScript, Sequelize ORM, Azure DevOps CI/CD pipelines, and integration with the shared Eiris Engineering Platform',
+    featured: true,
+  },
   {
     id: 'simxpert',
-    title: 'SimXpert',
-    category: 'Engineering Software',
+    title: 'SimXpert — Electrical Power System Simulation Engine',
+    category: 'Simulation & Power Systems',
     shortDescription:
-      'Engineering software supporting simulation and technical engineering workflows.',
-
+      'Advanced electrical engineering simulation platform performing Power Flow Analysis, Short-Circuit fault calculations, Motor Starting studies, and interactive Single-Line Diagram configuration for power grid and industrial facility modelling.',
     description:
-      'SimXpert is part of the engineering software ecosystem focused on simulation-oriented workflows and engineering applications.',
-
+      'SimXpert is a sophisticated electrical power systems simulation platform developed at Eiris Innovation India Pvt. Ltd. It enables electrical engineers to construct detailed network models and execute rigorous analytical studies including Power Flow Analysis, Short-Circuit fault simulations, Motor Starting transient evaluations, and Single-Line Diagram (SLD) configuration. The platform is engineered to perform computationally intensive power system calculations with accuracy and reliability, supporting engineers in ensuring grid safety, equipment compliance, and operational efficiency across industrial and utility network environments.',
     technologies: [
       'React.js',
       'Node.js',
       'PostgreSQL',
+      'TypeScript',
+      'REST APIs',
+      'Single-Line Diagram (SLD)',
+      'Azure DevOps',
     ],
-
     highlights: [
-      'Engineering-focused application workflows',
-      'Simulation-oriented functionality',
-      'Enterprise software development',
+      'Power Flow Analysis: steady-state voltage, current, and power calculation across complex multi-bus electrical networks',
+      'Short-Circuit Analysis: symmetrical and asymmetrical fault simulation to validate electrical equipment ratings, protection coordination, and safety compliance',
+      'Motor Starting Analysis: dynamic transient voltage drop and starting torque evaluation for large motor commissioning and protection studies',
+      'Interactive Single-Line Diagram (SLD) configuration: graphical network topology modelling with draggable component placement and real-time parameter editing',
+      'High-accuracy numerical computation services for rigorous engineering-grade simulation results',
     ],
-
     responsibilities: [
-      'Contributed to full-stack application development.',
-      'Worked on frontend and backend functionality.',
-      'Worked with database-driven application workflows.',
+      'Delivered complex simulation control interfaces, study configuration panels, and results visualisation dashboards using React.js and TypeScript — designed to the precision requirements of electrical engineering users.',
+      'Developed performance-optimised backend calculation service APIs in Node.js to manage power system study execution, numerical solver integration, and structured result persistence.',
+      'Worked in close technical partnership with power systems domain engineers to accurately implement analytical formulas, network modelling conventions, and IEEE/IEC calculation standards.',
+      'Engineered efficient PostgreSQL data models and query strategies for storing and retrieving large simulation datasets, network topologies, and multi-scenario study results.',
+      'Maintained comprehensive API documentation and contributed to Azure DevOps CI/CD pipelines to support reliable platform releases and continuous engineering delivery.',
     ],
-
     links: {
       live: null,
       github: null,
     },
-
     screenshots: [],
-
-    architecture: null,
-
+    architecture: 'Domain-driven Node.js calculation service backend with React.js SPA configuration UI, TypeScript, structured PostgreSQL storage, and Azure DevOps release pipelines',
     featured: true,
   },
-
   {
-    id: 'eiris-platform',
-    title: 'Eiris Platform',
-    category: 'Enterprise Platform',
+    id: 'custom-erp',
+    title: 'Enterprise ERP — UAE Business Management Platform',
+    category: 'Enterprise ERP',
     shortDescription:
-      'An enterprise software platform supporting reusable functionality across engineering applications.',
-
+      'Comprehensive, modular ERP platform purpose-built for UAE businesses, automating core operations across HR, Financial Accounting, Sales, Procurement, and Inventory management in a unified system.',
     description:
-      'The Eiris Platform provides common platform functionality used across engineering software products.',
-
+      'A fully bespoke, multi-module Enterprise Resource Planning (ERP) platform designed and delivered at Quality Horizon Pvt. Ltd. for UAE-based commercial organisations. The system integrates and automates the complete operational backbone of a business — spanning Human Resources, Financial Accounting, Sales Order Management, Purchase and Procurement, and Inventory Control — within a single, cohesive application. Built to handle high transaction volumes and complex multi-department workflows, the platform dramatically reduces manual processes, improves data accuracy, and provides executives with consolidated operational visibility across the entire business.',
     technologies: [
-      'React.js',
       'Node.js',
-      'PostgreSQL',
+      'React.js',
+      'Express.js',
+      'MySQL',
       'REST APIs',
+      'CI/CD Pipelines',
+      'HTML5 / CSS3',
     ],
-
     highlights: [
-      'Reusable platform functionality',
-      'Enterprise application development',
-      'API-driven architecture',
+      'Fully integrated HR module: employee lifecycle management, attendance tracking, leave administration, and payroll processing automation',
+      'Financial accounting engine: general ledger, accounts payable/receivable, automated invoicing, bank reconciliation, and financial period reporting',
+      'Sales order management: quotation generation, order confirmation, delivery tracking, and customer relationship workflows',
+      'Procurement and purchase control: supplier management, purchase requisition to purchase order workflows, and goods receipt processing',
+      'Real-time inventory management: multi-location stock tracking, reorder alerts, and warehouse movement auditing',
+      'Role-based access control hierarchy designed for executives, department managers, and operational staff with granular permission management',
     ],
-
     responsibilities: [
-      'Contributed to full-stack application functionality.',
-      'Developed frontend features using React.js.',
-      'Worked on backend APIs and services.',
-      'Worked with database-backed application functionality.',
+      'Architected and implemented the modular full-stack application using React.js for the frontend and Node.js / Express.js for the backend — structuring each ERP domain as an independently maintainable module.',
+      'Designed normalised MySQL database schemas supporting complex inter-module relational data integrity — including financial transaction ledgers, inventory movement logs, and HR records.',
+      'Built a reusable, component-driven React.js UI library covering data grids, audit trail views, paginated transaction tables, and multi-step workflow forms used consistently across all modules.',
+      'Implemented RESTful API architecture with comprehensive request validation, role-based authorisation middleware, and structured error handling.',
+      'Established CI/CD pipeline integrations for automated testing and deployment, reducing release cycle friction and ensuring consistent production build quality.',
     ],
-
     links: {
       live: null,
       github: null,
     },
-
     screenshots: [],
-
-    architecture: null,
-
+    architecture: 'Modular domain-driven Express.js / Node.js backend with MySQL relational data store, React.js component-driven SPA frontend, and CI/CD delivery pipelines',
+    featured: true,
+  },
+  {
+    id: 'task-management-system',
+    title: 'Agile Task Management System — Slack-Integrated Project Tracker',
+    category: 'Productivity & Collaboration',
+    shortDescription:
+      'Jira-inspired agile project management and issue-tracking platform with sprint board workflows, real-time task progression, and bidirectional Slack API automation for engineering team collaboration.',
+    description:
+      'A comprehensive internal project management and issue-tracking platform developed at Knoxed Infotech, designed to meet the specific agile workflow requirements of engineering teams. Inspired by the productivity model of Jira, the system provides sprint planning, backlog management, board-based task progression, and issue assignment — supplemented by deep Slack workspace integration that delivers automated, real-time notifications directly to team channels. The platform was built with a scalable, service-oriented Node.js backend architecture and a responsive React.js interface to support fast-moving development teams operating at high update frequency.',
+    technologies: [
+      'Node.js',
+      'React.js',
+      'JavaScript',
+      'MySQL',
+      'Slack API',
+      'Webhooks',
+      'REST APIs',
+      'HTML5 / CSS3',
+    ],
+    highlights: [
+      'Agile sprint board with drag-and-drop task progression, backlog prioritisation, and sprint planning workflows modelled on established project management standards',
+      'Bidirectional Slack API integration: automated channel notifications for task assignments, status changes, sprint completions, and deadline alerts',
+      'Scalable service-oriented Node.js backend with clearly isolated domain services for task management, sprint orchestration, user management, and notification delivery',
+      'Advanced MySQL query optimisation and indexing to sustain low-latency performance during peak concurrent team activity across multiple active sprints',
+      'Configurable notification rules enabling teams to tailor Slack alert frequency, channel routing, and event triggers to their workflow preferences',
+    ],
+    responsibilities: [
+      'Led the architectural design of the modular, service-oriented Node.js backend — defining clear service boundaries, API contracts, and data models for each functional domain.',
+      'Implemented the Slack API integration layer, including OAuth workspace authorisation, event subscription management, and webhook-based notification dispatch for all task lifecycle events.',
+      'Built responsive, interactive sprint boards, task detail modals, backlog views, and user assignment interfaces using React.js — optimised for high-frequency update workflows.',
+      'Optimised MySQL database schema design and query execution plans to handle concurrent multi-user interactions across overlapping sprint timelines without performance degradation.',
+      'Defined and enforced RESTful API conventions, conducted structured code reviews, and documented the integration patterns used across the notification and task management services.',
+    ],
+    links: {
+      live: null,
+      github: null,
+    },
+    screenshots: [],
+    architecture: 'Service-oriented Node.js backend with domain-driven API design, Slack API event subscriptions and webhook dispatch, React.js SPA, and MySQL relational persistence',
+    featured: false,
+  },
+  {
+    id: 'eiris-platform',
+    title: 'Eiris Engineering Platform — Shared Services Foundation',
+    category: 'Enterprise Platform',
+    shortDescription:
+      'The foundational enterprise platform layer providing centralised authentication, shared calculation services, reusable UI component libraries, and unified API contracts across all Eiris engineering software products.',
+    description:
+      'The Eiris Engineering Platform serves as the shared-services backbone underpinning all engineering software products developed at Eiris Innovation India Pvt. Ltd. — including PoleXpert and SimXpert. It provides centralised authentication and authorisation, common engineering calculation pipelines, reusable UI component libraries, design system tokens, shared API gateway services, and standardised data schemas that ensure consistency, reliability, and maintainability across the entire Eiris product portfolio. Building on this platform significantly accelerates engineering feature delivery by eliminating cross-product duplication and enforcing unified quality standards.',
+    technologies: [
+      'React.js',
+      'Node.js',
+      'PostgreSQL',
+      'TypeScript',
+      'REST APIs',
+      'Azure DevOps',
+      'CI/CD Pipelines',
+    ],
+    highlights: [
+      'Centralised authentication and role-based authorisation services consumed consistently across PoleXpert, SimXpert, and future Eiris applications',
+      'Shared engineering calculation pipeline infrastructure enabling reuse of common mathematical and domain-specific computation logic across products',
+      'Comprehensive reusable React.js UI component library and design system providing consistent styling, interaction patterns, and accessibility across all engineering applications',
+      'Unified REST API gateway contracts and versioning standards ensuring backward-compatible, predictable integration between platform services and consuming applications',
+      'Automated CI/CD release pipelines on Azure DevOps maintaining reliable build, test, and deployment cycles across the platform and all dependent products',
+    ],
+    responsibilities: [
+      'Engineered the shared React.js UI component library and design token system — covering form controls, data grids, navigation patterns, and modal frameworks — adopted across all product frontends.',
+      'Developed common platform REST APIs in Node.js for authentication, user management, permission resolution, and shared calculation services consumed by PoleXpert and SimXpert.',
+      'Designed centralised PostgreSQL database schemas for shared platform entities, ensuring relational integrity and consistent data access patterns across all engineering applications.',
+      'Participated in structured cross-team code reviews, contributed to platform architectural documentation, and drove continuous improvements to shared service reliability and developer experience.',
+      'Supported Azure DevOps pipeline maintenance and optimisation to ensure efficient, automated build and release workflows for both the platform and dependent engineering products.',
+    ],
+    links: {
+      live: null,
+      github: null,
+    },
+    screenshots: [],
+    architecture: 'Shared enterprise platform with centralised Node.js REST API services, React.js component library, unified PostgreSQL schemas, and Azure DevOps CI/CD release management',
     featured: false,
   },
 ];

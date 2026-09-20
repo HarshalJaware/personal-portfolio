@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import SectionHeading from '../common/SectionHeading';
 import Button from '../common/Button';
@@ -13,6 +12,7 @@ const Contact = () => {
   const [form, setForm] = useState(initialForm);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('');
+  const [copied, setCopied] = useState(false);
 
   const validate = () => {
     const newErrors = {};
@@ -52,6 +52,17 @@ const Contact = () => {
     setStatus('');
   };
 
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText('jawareharshal93@gmail.com');
+      setCopied(true);
+      setTimeout(() => setCopied(false), 3000);
+    } catch {
+      // Fallback
+      setCopied(false);
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -85,32 +96,65 @@ const Contact = () => {
         description="Have a project, opportunity, or technical discussion in mind? Feel free to reach out."
       />
 
-      <div className="mt-12 grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
+      <div className="mt-12 grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-semibold text-white">
               Get in touch
             </h3>
 
-            <p className="mt-4 leading-7 text-slate-400">
-              I'm open to discussing software development,
-              engineering applications, and professional opportunities.
+            <p className="mt-4 leading-relaxed text-slate-400">
+              I am open to discussing senior full-stack engineering roles, Node.js backend architecture, enterprise platform development, and complex domain-specific software challenges.
             </p>
           </div>
 
-          <div className="space-y-4">
-            <a
-              href="mailto:jawareharshal93@gmail.com"
-              className="block text-slate-300 transition hover:text-sky-400"
-            >
-              ✉ jawareharshal93@gmail.com
-            </a>
+          {/* Quick Copy Email Box */}
+          <div className="rounded-xl border border-slate-700/80 bg-slate-900/60 p-4">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
+              Direct Email
+            </p>
+            <div className="mt-2 flex items-center justify-between gap-3">
+              <a
+                href="mailto:jawareharshal93@gmail.com"
+                className="text-sm font-medium text-sky-400 transition hover:underline truncate"
+              >
+                jawareharshal93@gmail.com
+              </a>
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                className="shrink-0 rounded-lg border border-slate-700 bg-slate-800 px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:border-sky-400 hover:text-white cursor-pointer"
+              >
+                {copied ? 'Copied ✓' : 'Copy'}
+              </button>
+            </div>
+          </div>
 
+          <div className="space-y-3.5 text-sm">
+            <div className="flex items-center gap-3 text-slate-300">
+              <span className="text-sky-400 font-semibold">Phone:</span>
+              <a href="tel:+919860451556" className="transition hover:text-sky-400">
+                (+91) 9860451556
+              </a>
+            </div>
+
+            <div className="flex items-center gap-3 text-slate-300">
+              <span className="text-sky-400 font-semibold">Location:</span>
+              <span>Pune, Maharashtra, India</span>
+            </div>
+
+            <div className="flex items-center gap-3 text-slate-300">
+              <span className="text-sky-400 font-semibold">Notice:</span>
+              <span className="text-emerald-400 font-medium">1 Month Notice Period</span>
+            </div>
+          </div>
+
+          <div className="pt-2 flex flex-wrap gap-4 text-sm">
             <a
               href="https://github.com/HarshalJaware"
               target="_blank"
-              rel="noreferrer"
-              className="block text-slate-300 transition hover:text-sky-400"
+              rel="noreferrer noopener"
+              className="rounded-lg border border-slate-700 bg-slate-900/80 px-4 py-2 text-slate-300 transition hover:border-sky-400 hover:text-sky-400"
             >
               GitHub ↗
             </a>
@@ -118,10 +162,18 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/harshal-jaware-7714b4135/"
               target="_blank"
-              rel="noreferrer"
-              className="block text-slate-300 transition hover:text-sky-400"
+              rel="noreferrer noopener"
+              className="rounded-lg border border-slate-700 bg-slate-900/80 px-4 py-2 text-slate-300 transition hover:border-sky-400 hover:text-sky-400"
             >
               LinkedIn ↗
+            </a>
+
+            <a
+              href="./Harshal_Jaware_Senior_Full_Stack_Developer_Resume.pdf"
+              download="Harshal_Jaware_Senior_Full_Stack_Developer_Resume.pdf"
+              className="rounded-lg border border-sky-500/40 bg-sky-500/10 px-4 py-2 text-sky-400 transition hover:bg-sky-500 hover:text-slate-950"
+            >
+              Download Resume ↓
             </a>
           </div>
         </div>
@@ -129,7 +181,7 @@ const Contact = () => {
         <form
           onSubmit={handleSubmit}
           noValidate
-          className="rounded-2xl border border-slate-700 bg-slate-900/60 p-6 sm:p-8"
+          className="rounded-2xl border border-slate-700 bg-slate-900/60 p-6 sm:p-8 backdrop-blur-sm"
         >
           <div className="space-y-5">
             <div>
