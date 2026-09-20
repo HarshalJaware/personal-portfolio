@@ -6,6 +6,7 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Skills from './components/sections/Skills';
 import Experience from './components/sections/Experience';
+import Projects from './components/sections/Projects';
 
 const App = () => {
   return (
@@ -19,9 +20,7 @@ const App = () => {
           <Skills />
           <Experience />
 
-          <section id="projects" className="min-h-40 py-20">
-            <h2 className="text-2xl font-bold">Projects</h2>
-          </section>
+          <Projects />
 
           <section id="contact" className="min-h-40 py-20">
             <h2 className="text-2xl font-bold">Contact</h2>
