@@ -4,6 +4,8 @@ import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
+import Skills from './components/sections/Skills';
+import Experience from './components/sections/Experience';
 
 const App = () => {
   return (
@@ -14,10 +16,8 @@ const App = () => {
         <Container>
           <Hero />
           <About />
-
-          <section id="skills" className="min-h-40 py-20">
-            <h2 className="text-2xl font-bold">Skills</h2>
-          </section>
+          <Skills />
+          <Experience />
 
           <section id="projects" className="min-h-40 py-20">
             <h2 className="text-2xl font-bold">Projects</h2>
