@@ -8,6 +8,7 @@ import VideoProfile from './components/sections/VideoProfile';
 import Skills from './components/sections/Skills';
 import Experience from './components/sections/Experience';
 import Projects from './components/sections/Projects';
+import QuickApply from './components/sections/QuickApply';
 import Contact from './components/sections/Contact';
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Skills />
           <Experience />
           <Projects />
+          <QuickApply />
           <Contact />
         </Container>
       </main>

@@ -11,6 +11,7 @@ function Navbar() {
     { label: 'Skills', href: '#skills' },
     { label: 'Experience', href: '#experience' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Quick Apply', href: '#quick-apply' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -61,7 +62,7 @@ function Navbar() {
           </a>
 
           {/* Desktop Navigation Links */}
-          <div className="hidden items-center gap-7 md:flex">
+          <div className="hidden items-center gap-4 lg:gap-6 xl:gap-7 md:flex">
             {navigationItems.map((item) => (
               <a
                 key={item.href}
