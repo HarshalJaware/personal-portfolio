@@ -124,7 +124,7 @@ const Hero = () => {
                 <img
                   src="./profile.jpg"
                   alt="Harshal Arun Jaware — Senior Software Developer"
-                  className="h-full w-full object-cover object-top"
+                  className="h-full w-full object-cover object-[center_20%]"
                   loading="eager"
                 />
               </div>

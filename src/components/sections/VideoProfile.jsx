@@ -62,7 +62,7 @@ const VideoProfile = () => {
                     <img
                       src="./profile.jpg"
                       alt="Harshal Arun Jaware"
-                      className="relative h-28 w-28 rounded-full border-4 border-slate-800 object-cover object-top shadow-xl"
+                      className="relative h-28 w-28 rounded-full border-4 border-slate-800 object-cover object-[center_20%] shadow-xl"
                     />
                   </div>
 
