@@ -4,6 +4,7 @@ const Button = ({
   href,
   variant = 'primary',
   onClick,
+  type = 'button'
 }) => {
   const baseStyles =
     'inline-flex items-center justify-center rounded-lg px-5 py-3 text-sm font-semibold transition';
@@ -26,7 +27,7 @@ const Button = ({
   }
 
   return (
-    <button type="button" onClick={onClick} className={className}>
+    <button type={type} onClick={onClick} className={className}>
       {children}
     </button>
   );
